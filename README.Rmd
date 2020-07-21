@@ -1,0 +1,62 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# meantables
+
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.com/brad-cannell/meantables.svg?branch=master)](https://travis-ci.com/brad-cannell/meantables)
+[![CRAN status](https://www.r-pkg.org/badges/version/meantables)](https://cran.r-project.org/package=meantables)
+<!-- badges: end -->
+
+The goal of meantables is to quickly make tables of descriptive statistics (i.e., counts, means, confidence intervals) for continuous variables. This package is designed to work in a Tidyverse pipeline, and consideration has been given to get results from R to Microsoft Word ® with minimal pain.
+
+## Installation
+
+You can install the released version of meantables from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("meantables")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("brad-cannell/meantables")
+```
+## Example
+
+```{r}
+library(dplyr)
+library(meantables)
+```
+
+```{r}
+data("mtcars")
+```
+
+### Overall mean table with defaults
+```{r}
+mtcars %>% 
+  mean_table(mpg)
+```
+
+### Grouped means table with defaults
+
+```{r}
+mtcars %>% 
+  group_by(cyl) %>% 
+  mean_table(mpg)
+```
