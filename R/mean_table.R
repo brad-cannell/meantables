@@ -1,4 +1,4 @@
-#' @title Estimate Percents and 95 Percent Confidence Intervals in dplyr Pipelines
+#' @title Estimate Mean and 95 Percent Confidence Intervals in dplyr Pipelines
 #'
 #' @description The mean_table function produces overall and grouped
 #'   tables of means with related statistics. In addition to means, the
@@ -28,13 +28,14 @@
 #'
 #' @return A tibble of class "mean_table" or "mean_table_grouped"
 #' @export
+#' @importFrom dplyr %>%
 #'
 #' @references
 #'   SAS documentation: http://support.sas.com/documentation/cdl/en/proc/65145/HTML/default/viewer.htm#p0klmrp4k89pz0n1p72t0clpavyx.htm
 #'
 #' @examples
-#' library(tidyverse)
-#' library(bfuncs)
+#' library(dplyr)
+#' library(meantables)
 #'
 #' data(mtcars)
 #'
@@ -146,7 +147,7 @@ mean_table <- function(.data, x, t_prob = 0.975, output = default, digits = 2, .
       min      = min(!! x),
       max      = max(!! x)
     ) %>%
-    tibble::as.tibble()
+    tibble::as_tibble()
 
   # ===========================================================================
   # Add group variable names to summary table - if applicable
