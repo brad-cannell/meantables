@@ -3,3 +3,4 @@
 ^NOTES\.txt$
 ^README\.Rmd$
 ^\.travis\.yml$
+^cran-comments$
