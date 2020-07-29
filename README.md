@@ -14,7 +14,7 @@ status](https://www.r-pkg.org/badges/version/meantables)](https://cran.r-project
 The goal of meantables is to quickly make tables of descriptive
 statistics (i.e., counts, means, confidence intervals) for continuous
 variables. This package is designed to work in a Tidyverse pipeline, and
-consideration has been given to get results from R to Microsoft Word ®
+consideration has been given to get results from R to ‘Microsoft Word’ ®
 with minimal pain.
 
 ## Installation
