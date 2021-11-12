@@ -32,12 +32,13 @@ A tibble of class "mean_table" or "mean_table_grouped"
 \description{
 The mean_table function produces overall and grouped
   tables of means with related statistics. In addition to means, the
-  mean_table missing/non-missing frequencies, the standared error of the
+  mean_table missing/non-missing frequencies, the standard error of the
   mean (sem), the 95% confidence intervals for the mean(s), the minimum
   value, and the maximum value. For grouped tibbles, mean_table displays
   these statistics for each category of the group_by variable.
 }
 \examples{
+\dontrun{
 library(dplyr)
 library(meantables)
 
@@ -65,6 +66,7 @@ mtcars \%>\%
 1 mpg          cyl               4    11  26.7  4.51 1.36   23.6  29.7  21.4  33.9
 2 mpg          cyl               6     7  19.7  1.45 0.549  18.4  21.1  17.8  21.4
 3 mpg          cyl               8    14  15.1  2.56 0.684  13.6  16.6  10.4  19.2
+}
 }
 \references{
 SAS documentation: http://support.sas.com/documentation/cdl/en/proc/65145/HTML/default/viewer.htm#p0klmrp4k89pz0n1p72t0clpavyx.htm
