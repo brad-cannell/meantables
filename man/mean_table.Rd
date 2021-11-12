@@ -4,12 +4,12 @@
 \alias{mean_table}
 \title{Estimate Mean and 95 Percent Confidence Intervals in dplyr Pipelines}
 \usage{
-mean_table(.data, x, t_prob = 0.975, output = default, digits = 2, ...)
+mean_table(.data, .x, t_prob = 0.975, output = default, digits = 2, ...)
 }
 \arguments{
 \item{.data}{A tibble or grouped tibble.}
 
-\item{x}{The continuous response variable for which the statistics are
+\item{.x}{The continuous response variable for which the statistics are
 desired.}
 
 \item{t_prob}{(1 - alpha / 2). Default value is 0.975, which corresponds to
@@ -20,7 +20,7 @@ distribution with n - 1 degrees of freedom.}
 
   Default output includes the n, mean, sem, and 95% confidence interval for
   the mean. Using output = "all" also returns the the number of missing
-  values for x and the critical t-value.}
+  values for .x and the critical t-value.}
 
 \item{digits}{Round mean, lcl, and ucl to digits. Default is 2.}
 
@@ -48,10 +48,10 @@ data(mtcars)
 mtcars \%>\%
   mean_table(mpg)
 
-#> # A tibble: 1 x 8
-#>   response_var     n  mean      sem   lcl   ucl   min   max
-#>          <chr> <int> <dbl>    <dbl> <dbl> <dbl> <dbl> <dbl>
-#> 1          mpg    32 20.09 1.065424 17.92 22.26  10.4  33.9
+# A tibble: 1 x 9
+  response_var     n  mean    sd   sem   lcl   ucl   min   max
+  <chr>        <int> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+1 mpg             32  20.1  6.03  1.07  17.9  22.3  10.4  33.9
 
 # Grouped means table with defaults
 
@@ -59,12 +59,12 @@ mtcars \%>\%
   group_by(cyl) \%>\%
   mean_table(mpg)
 
-#> # A tibble: 3 x 10
-#>   response_var group_var group_cat     n  mean       sem   lcl   ucl   min   max
-#>          <chr>     <chr>     <dbl> <int> <dbl>     <dbl> <dbl> <dbl> <dbl> <dbl>
-#> 1          mpg       cyl         4    11 26.66 1.3597642 23.63 29.69  21.4  33.9
-#> 2          mpg       cyl         6     7 19.74 0.5493967 18.40 21.09  17.8  21.4
-#> 3          mpg       cyl         8    14 15.10 0.6842016 13.62 16.58  10.4  19.2
+# A tibble: 3 x 11
+  response_var group_var group_cat     n  mean    sd   sem   lcl   ucl   min   max
+  <chr>        <chr>         <dbl> <int> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+1 mpg          cyl               4    11  26.7  4.51 1.36   23.6  29.7  21.4  33.9
+2 mpg          cyl               6     7  19.7  1.45 0.549  18.4  21.1  17.8  21.4
+3 mpg          cyl               8    14  15.1  2.56 0.684  13.6  16.6  10.4  19.2
 }
 \references{
 SAS documentation: http://support.sas.com/documentation/cdl/en/proc/65145/HTML/default/viewer.htm#p0klmrp4k89pz0n1p72t0clpavyx.htm
