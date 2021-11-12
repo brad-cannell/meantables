@@ -1,3 +1,7 @@
+# meantables 0.1.2
+
+* Added the `mean_format()` function.
+
 # meantables 0.1.1
 
 * Changed the way that `n_miss` and `n` are calculated. Now correct when there are missing values. Built unit test to check for this.

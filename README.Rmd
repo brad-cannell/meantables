@@ -48,9 +48,33 @@ data("mtcars")
 ```
 
 ### Overall mean table with defaults
+
 ```{r}
 mtcars %>% 
   mean_table(mpg)
+```
+
+### Formatting overall mean and 95% CI
+
+```{r}
+mtcars %>%
+  mean_table(mpg) %>%
+  mean_format(
+    recipe = "mean (lcl - ucl)",
+    name = "mean_95",
+    digits = 1
+  ) %>% 
+  select(response_var, mean_95)
+```
+
+### Formatting grouped means table with mean and sd
+
+```{r}
+mtcars %>%
+  group_by(cyl) %>%
+  mean_table(mpg) %>%
+  mean_format("mean (sd)") %>% 
+  select(response_var:group_cat, formatted_stats)
 ```
 
 ### Grouped means table with defaults

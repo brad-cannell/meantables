@@ -157,9 +157,9 @@ mean_table <- function(.data, .x, t_prob = 0.975, output = default, digits = 2, 
   # Also add classes to "out"
   # If the input data frame (.data) was a grouped data frame, then the output
   # will be a bivariate analysis of means ("mean_table_grouped"). Pass that
-  # information on to "out." It can be used later in format_table.
+  # information on to "out." It can be used later in mean_format.
   # Otherwise the output will be a univariate analysis of means ("mean_table")
-  # That class will also be used later in format_table.
+  # That class will also be used later in mean_format.
   # ===========================================================================
   if (n_groups == 0) {
 
