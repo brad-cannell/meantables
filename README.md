@@ -5,8 +5,6 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.com/brad-cannell/meantables.svg?branch=master)](https://travis-ci.com/brad-cannell/meantables)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/meantables)](https://cran.r-project.org/package=meantables)
 <!-- badges: end -->
