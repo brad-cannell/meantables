@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# meantables
+# meantables <img style="padding: 15px;" align="left" src="man/figures/meantables_hex/meantables.png" alt="meantables hex logo" width="250" height="289">
 
 <!-- badges: start -->
 

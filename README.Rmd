@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# meantables
+# meantables <img style="padding: 15px;" align="left" src="man/figures/meantables_hex/meantables.png" alt="meantables hex logo" width="250" height="289">
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/meantables)](https://cran.r-project.org/package=meantables)
