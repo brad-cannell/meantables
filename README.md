@@ -7,6 +7,7 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/meantables)](https://cran.r-project.org/package=meantables)
+[![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/meantables)](https://www.r-pkg.org/pkg/meantables)
 <!-- badges: end -->
 
 The goal of meantables is to quickly make tables of descriptive
@@ -101,10 +102,10 @@ mtcars %>%
   group_by(cyl) %>% 
   mean_table(mpg)
 #> # A tibble: 3 × 11
-#>   response_var group_var group_cat     n  mean    sd   sem   lcl   ucl   min
-#>   <chr>        <chr>         <dbl> <int> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
-#> 1 mpg          cyl               4    11  26.7  4.51 1.36   23.6  29.7  21.4
-#> 2 mpg          cyl               6     7  19.7  1.45 0.549  18.4  21.1  17.8
-#> 3 mpg          cyl               8    14  15.1  2.56 0.684  13.6  16.6  10.4
-#> # … with 1 more variable: max <dbl>
+#>   response_var group_var group…¹     n  mean    sd   sem   lcl   ucl   min   max
+#>   <chr>        <chr>       <dbl> <int> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+#> 1 mpg          cyl             4    11  26.7  4.51 1.36   23.6  29.7  21.4  33.9
+#> 2 mpg          cyl             6     7  19.7  1.45 0.549  18.4  21.1  17.8  21.4
+#> 3 mpg          cyl             8    14  15.1  2.56 0.684  13.6  16.6  10.4  19.2
+#> # … with abbreviated variable name ¹​group_cat
 ```
